@@ -230,7 +230,60 @@ namespace TestClass
 
             }
 
-         
+            // Invalid Test 1
+            [Test]
+            public void AnalyzeTriangle_Input10and20and40_OutputInvalid()
+            {
+                //Arrange
+                int firstSide = 10;
+                int secondSide = 20;
+                int thirdSide = 40;
+                string expected = "INVALID!!";
+
+                //Act
+                string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+                //Assert
+                Assert.That(actual, Is.EqualTo(expected));
+
+            }
+
+            // Invalid Test 2
+            [Test]
+            public void AnalyzeTriangle_Input10andNegative20and40_OutputInvalid()
+            {
+                //Arrange
+                int firstSide = 10;
+                int secondSide = -20;
+                int thirdSide = 40;
+                string expected = "INVALID!!";
+
+                //Act
+                string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+                //Assert
+                Assert.That(actual, Is.EqualTo(expected));
+
+            }
+
+            // Invalid Test 3
+            [Test]
+            public void AnalyzeTriangle_Input100and120and400_OutputInvalid()
+            {
+                //Arrange
+                int firstSide = 100;
+                int secondSide = 120;
+                int thirdSide = 400;
+                string expected = "INVALID!!";
+
+                //Act
+                string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+                //Assert
+                Assert.That(actual, Is.EqualTo(expected));
+
+            }
+
 
 
 
