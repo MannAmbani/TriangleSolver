@@ -176,7 +176,61 @@ namespace TestClass
 
             }
 
-      
+            // Invalid Triangle - a zero has been detected Test 1
+            [Test]
+            public void AnalyzeTriangle_Input8and9and0_OutputInvalidTriangleAZeroHasBeenDetected()
+            {
+                //Arrange
+                int firstSide = 8;
+                int secondSide = 9;
+                int thirdSide = 0;
+                string expected = "Invalid Triangle - a zero has been detected";
+
+                //Act
+                string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+                //Assert
+                Assert.That(actual, Is.EqualTo(expected));
+
+            }
+
+            // Invalid Triangle - a zero has been detected Test 2
+            [Test]
+            public void AnalyzeTriangle_Input8and0and0_OutputInvalidTriangleAZeroHasBeenDetected()
+            {
+                //Arrange
+                int firstSide = 8;
+                int secondSide = 0;
+                int thirdSide = 0;
+                string expected = "Invalid Triangle - a zero has been detected";
+
+                //Act
+                string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+                //Assert
+                Assert.That(actual, Is.EqualTo(expected));
+
+            }
+
+            // Invalid Triangle - a zero has been detected Test 3
+            [Test]
+            public void AnalyzeTriangle_Input0and0and0_OutputInvalidTriangleAZeroHasBeenDetected()
+            {
+                //Arrange
+                int firstSide = 0;
+                int secondSide = 0;
+                int thirdSide = 0;
+                string expected = "Invalid Triangle - a zero has been detected";
+
+                //Act
+                string actual = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+                //Assert
+                Assert.That(actual, Is.EqualTo(expected));
+
+            }
+
+         
 
 
 
